@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "author": "rabeea anjum",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 67.8, "left": -0.6, "attrs": {} },
+    { "type": "wokwi-relay-module", "id": "relay1", "top": -19, "left": 192, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -39.7, "left": -9.8, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": -32.4, "left": 99.8, "attrs": { "color": "red" } }
+  ],
+  "connections": [
+    [ "uno:GND.1", "led1:C", "black", [ "v0" ] ],
+    [ "led1:A", "uno:13", "green", [ "v67.2" ] ],
+    [ "pot1:GND", "uno:GND.1", "black", [ "v0" ] ],
+    [ "pot1:VCC", "uno:5V", "red", [ "v240", "h124" ] ],
+    [ "pot1:SIG", "uno:A0", "green", [ "v0" ] ],
+    [ "relay1:VCC", "uno:5V", "red", [ "h0" ] ],
+    [ "relay1:GND", "uno:GND.1", "black", [ "h0" ] ],
+    [ "relay1:IN", "uno:8", "green", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
